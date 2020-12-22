@@ -12,10 +12,9 @@ public class Stringa{
     
     fill(colore); //colore della stringa
     
-    textFont(f);
-    textSize(64);
-    text(s, 10, 100);
-    
+    textFont(f); //inizializzo il font della dtringa
+    textSize(64); //inizializzo la dimensione della stringa
+    text(s, 10, 100); //stampo la tringa
   }
 
   public void setColore(color colore){this.colore = color(colore); }
