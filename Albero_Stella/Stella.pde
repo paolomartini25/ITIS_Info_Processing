@@ -1,12 +1,10 @@
-
 public class Stella{
    
   private static final int DIST_BARICENTRO =35;
   private static final int LARGHEZZA = 35;
   private static final int LUNG_CODA = 100;
-  private static final int SPESSORE = 3;             //spessore dei bordi
+  private static final int SPESSORE = 1;             //spessore dei bordi
   private static final color GIALLO = #FFFF00;      //colore giallo
-  private static final color AZZURRO = #B4FAF0;      //colore azzurro
   private static final int STARTX = 100;
   private static final int STARTY = 60;
   
@@ -23,7 +21,7 @@ public class Stella{
   
      background(#B4FAF0);
      strokeWeight(SPESSORE); //spessore
-     stroke(AZZURRO); //colore del bordo
+     stroke(GIALLO); //colore del bordo
      fill(GIALLO);
        
      if (dir == 1) triangle(cordX, cordY+DIST_BARICENTRO/2, cordX-LUNG_CODA, cordY, cordX-LUNG_CODA, cordY+DIST_BARICENTRO);
