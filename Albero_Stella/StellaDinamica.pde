@@ -2,7 +2,6 @@ public class StellaDinamica extends Stella {
   
   private static final int INIZIOX = 100;
   private static final int FINEX = 540;
-  private static final int Y = 40;
   
   private int speedX;  //velocità in orizzontale
   private final int DEFAULT_VET = 1;
@@ -25,9 +24,9 @@ public class StellaDinamica extends Stella {
       setCordX( getCordX() + speedX);
 }
 
-  public void show() throws Exception{
+  public void draw() throws Exception{
     move();
-    super.show();
+    super.draw();
     }
     
     public void setSpeedX(int vel){

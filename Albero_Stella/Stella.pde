@@ -17,7 +17,7 @@ public class Stella{
     cordY = STARTY;
   }
 
-  public void show() throws Exception{
+  public void draw() throws Exception{
   
      background(#B4FAF0);
      strokeWeight(SPESSORE); //spessore

@@ -1,30 +1,41 @@
 Albero[] array;
 
-Albero a;
+//Albero a;
+Foresta f;
 StellaDinamica s;
-private final static int N = 4;
+Luce l;
+CatenadiLuci c;
+private final static int N = 3;
 
 public void settings(){
   size(640, 360); //dimensione della finestra
 }
 
 public void setup(){
-  
-  background(#B4FAF0);
-  a = new Albero(); //ascisse, ordinate, numero di triangoli
-  s = new StellaDinamica(); //inizio 100, 40; fine 540, 40
   array = new Albero[N];
+  background(#B4FAF0);
+  try{
+    f = new Foresta(4);
+  } catch (Exception e) {
+    System.out.println(e.getMessage());
+  }
+  s = new StellaDinamica(); //inizio 100, 40; fine 540, 40
+  c = new CatenadiLuci(4);
+  
 }
 
 public void draw(){ 
-  
+
   try{
-    s.show();
-    for(int i = 0; i<N; i++){
-      a.show(width*1/5*(i+1), 250, 3);
-    }
+    s.draw();
   } catch (Exception e) {
     System.out.println(e.getMessage());
     delay(10000);
   }
+  f.draw();
+  c.draw();
+}
+
+public void mousePressed(){
+ c.ePremuto(mouseX, mouseY); 
 }

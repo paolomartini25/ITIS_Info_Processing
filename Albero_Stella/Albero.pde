@@ -1,5 +1,5 @@
 public class Albero{
-//correggere la la cx con cordx e settare il troco
+  
   private static final int LARGHEZZA = 50;           //metà della larghezza della base del triangolo
   private static final int DIST_BARICENTRO = 50;     //distanza dal baricentro delle ordinate del triangolo
   private static final int AUMENTO = 30;             //aumento dell'altezza delle coordinate del triangolo
@@ -15,15 +15,13 @@ public class Albero{
   private float cordY;
   private int numt;
   
-  public Albero(){
-    
-  }
-  
-  public void show(float cx, float cy, int num) throws Exception{
-    
+  public Albero(float cx, float cy, int num) throws Exception{
     setCordX(cx);
     setCordY(cy);
     setNumt(num);
+  }
+  
+  public void draw() {
     
     int diminuzione_larghezza = 0;
     int aumento_altezza = 0;
@@ -50,27 +48,25 @@ public class Albero{
     
   } 
   
-  public void setCordX(float x) throws Exception 
-  {
+  public void setCordX(float x) throws Exception {
     if(x<0 || x>width){
       throw new Exception("ascisse impossibili");
     }
     else this.cordX = x;
   }
   
-  public void setCordY(float y) throws Exception 
-  {
+  public void setCordY(float y) throws Exception {
     if(y<0 || y>height){
       throw new Exception("ordinate impossibili");
     }
     else this.cordY = y;
   }
   
-  public void setNumt(int numt) throws Exception 
-  {
+  public void setNumt(int numt) throws Exception {
     if(numt<=0){
       throw new Exception("il numero di triangoli deve essere maggiore di 0");
     }
     else this.numt = numt;
   }
+  
 }
