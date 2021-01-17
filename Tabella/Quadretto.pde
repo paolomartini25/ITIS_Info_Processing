@@ -9,9 +9,9 @@ public class Quadretto{
     this.numC = nc;
     this.numR = nr;
     this.cordX = int(mx*numC)/width;
-    System.out.println(cordX);
+    //System.out.println(cordX); per vedere il valore della coordinate del quadretto
     this.cordY = int(my*numR)/height;
-    System.out.println(cordY);
+    //System.out.println(cordY);
   }
   
   int getCordX(){

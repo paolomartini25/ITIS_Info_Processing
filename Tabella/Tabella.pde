@@ -1,11 +1,11 @@
 Matrice m;
 Quadretto q;
 public void settings(){
-  size(660, 360); //dimensione della finestra
+  size(600, 600); //dimensione della finestra
 }
 
 public void setup(){
-  m = new Matrice(22,12);
+  m = new Matrice(10,10);
 }
 
 public void draw(){ 
